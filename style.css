@@ -34,6 +34,7 @@ button{
     background-color: #c1bbb3;
     text-transform: capitalize;
     font-size: 15px;
+    border-radius: 8px;
 }
 
 .card {
