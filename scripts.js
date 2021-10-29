@@ -63,6 +63,34 @@ document.addEventListener('DOMContentLoaded', ()=> {
         .catch(function (err) {
             console.log(err)
         })
+    
+    
+    
+     function getpopupdata(q) {
+            document.getElementById('popout').style.display = 'flex';
+            document.getElementById('country-list').style.opacity = '0.7';        
+            const api = "https://api.openweathermap.org/data/2.5/weather?q=" + q + "&appid=9fc1269056a6b8aaf47d1d8b2ca31e07";
+            fetch(api).then(response => response.json()).then((data) => {
+                var country_name = data.name;
+                var country_temp = data.main['temp'];
+                var country_wind = data.wind['speed'];
+                var country_humidity = data.main['humidity'];
+                //Grab data and insert it into created elements           
+                document.getElementById("span_country_name").innerHTML = country_name;
+                document.getElementById("span_humidity").innerHTML = country_humidity;
+                document.getElementById("span_country_wind").innerHTML = country_wind;
+                document.getElementById("span_country_temp").innerHTML = country_temp;
+            }).catch(err => {
+                alert(err);
+            })
+        }
+        document.getElementById('closeBtn').addEventListener('click', () => {
+            document.getElementById('popout').style.display = 'none';
+        })
+        //Call the function that will automatically run renderCountry() also 
+        fetchData();
+        
+})
         
 })
 
