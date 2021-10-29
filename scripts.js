@@ -100,5 +100,5 @@ document.addEventListener('DOMContentLoaded', ()=> {
 // })
 // .catch(function (err) {
 //     console.log(err)
-// })
+})
 
