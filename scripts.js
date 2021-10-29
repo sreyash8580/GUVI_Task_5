@@ -63,10 +63,10 @@ document.addEventListener('DOMContentLoaded', ()=> {
         .catch(function (err) {
             console.log(err)
         })
-    
-    
-    
-//      function getpopupdata(q) {
+    })
+
+
+//         function getpopupdata(q) {
 //             document.getElementById('popout').style.display = 'flex';
 //             document.getElementById('country-list').style.opacity = '0.7';        
 //             const api = "https://api.openweathermap.org/data/2.5/weather?q=" + q + "&appid=9fc1269056a6b8aaf47d1d8b2ca31e07";
@@ -90,9 +90,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
 //         //Call the function that will automatically run renderCountry() also 
 //         fetchData();
         
-})
-        
-})
+// })
 
 // fetch("api.openweathermap.org/data/2.5/weather?q=London,uk&appid={9fc1269056a6b8aaf47d1d8b2ca31e07}")
 // .then(function (data) {
@@ -100,5 +98,5 @@ document.addEventListener('DOMContentLoaded', ()=> {
 // })
 // .catch(function (err) {
 //     console.log(err)
-})
+// })
 
